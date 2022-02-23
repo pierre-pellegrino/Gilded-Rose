@@ -1,4 +1,4 @@
-const {Shop, Item} = require("../src/gilded_rose");
+const {Shop} = require("../src/gilded_rose");
 const {LosingQualityItem} = require("../src/losing_quality_item");
 const {EarningQualityItem} = require("../src/earning_quality_item");
 const {LegendaryItem} = require("../src/legendary_item");
@@ -6,19 +6,19 @@ const {LegendaryItem} = require("../src/legendary_item");
 describe("Gilded Rose", function() {
   // General settings
   it("should foo", function() {
-    const gildedRose = new Shop([new Item("foo", 0, 0)]);
+    const gildedRose = new Shop([new LosingQualityItem("foo", 0, 0)]);
     const items = gildedRose.updateQuality();
     expect(items[0].name).toBe("foo");
   });
 
   it("quality should have a minimum value of 0", function() {
-    const gildedRose = new Shop([new Item("foo", 0, 0)]);
+    const gildedRose = new Shop([new LosingQualityItem("foo", 0, 0)]);
     const items = gildedRose.updateQuality();
     expect(items[0].quality).toBe(0);
   });
 
   it("quality should have a maximum value of 50", function() {
-    const gildedRose = new Shop([new Item("foo", 0, 0)]);
+    const gildedRose = new Shop([new LosingQualityItem("foo", 0, 0)]);
     const items = gildedRose.updateQuality();
     expect(items[0].quality).toBe(0);
   });
