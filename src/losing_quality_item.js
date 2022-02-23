@@ -12,6 +12,7 @@ class LosingQualityItem extends Item {
   updateQuality() {
     if (this.quality > 0) this.quality -= this.multiplicator;
     if (this.quality < 0) this.quality = 0;
+    this.sellIn -= 1;
   }
 }
 
