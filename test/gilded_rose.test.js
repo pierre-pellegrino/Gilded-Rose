@@ -1,4 +1,7 @@
-const {Shop, Item, LegendaryItem, LosingQualityItem, EarningQualityItem} = require("../src/gilded_rose");
+const {Shop, Item} = require("../src/gilded_rose");
+const {LosingQualityItem} = require("../src/losing_quality_item");
+const {EarningQualityItem} = require("../src/earning_quality_item");
+const {LegendaryItem} = require("../src/legendary_item");
 
 describe("Gilded Rose", function() {
   // General settings
